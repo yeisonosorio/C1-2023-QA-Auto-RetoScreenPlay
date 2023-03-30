@@ -8,15 +8,6 @@ Feature: Iniciar sesion en la pagina del exito y agregar productos al carrito
   para poder comprar productos en la página
 
 
-
-  @InicioSesion
-  Scenario: Iniciar sesion exitosa
-    Given que el usuario esta en la pagina principal del exito
-    When el usuario completa los campos para iniciar sesion
-    Then el usuario vera un mensaje de hola en su cuenta
-
-
-
   @CompraProducto
   Scenario: seleccionar un producto
     Given El usuario inicio sesion en pagina de exito
