@@ -27,7 +27,7 @@ public class UbicacionEnvio extends PageObject {
 
 
     public static final Target BOTON_CERRAR = Target.the("Boton cerrar")
-            .located(By.xpath("//button[normalize-space()='Confirmar']"));
+            .located(By.xpath("//*[name()='path' and contains(@data-name,'Path 373')]"));
 
 
 }
