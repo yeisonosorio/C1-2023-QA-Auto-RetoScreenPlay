@@ -154,7 +154,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 30-03-2023 14:44</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 30-03-2023 16:41</span>
     <br style="clear:left"/>
 </div>
 
@@ -197,9 +197,9 @@ para poder comprar productos en la página
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
                             <span class="test-case-title">
-                                <span class="failing-color">seleccionar un producto
+                                <span class="error-color">seleccionar un producto
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -222,7 +222,7 @@ para poder comprar productos en la página
         <div class="table">
             <div class="row">
                 <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">Element should be enabled exception: Expected enabled element was not enabled</span>
+                    <span class="error-message error-message-title">Element click intercepted exception: element click intercepted: Element (span class='ml2')...(/span) is not clickable at point (272, 134). Other element would receive the click: (div role='presentation' class='undefined bg-base--inverted o-50 h-100')(/div)</span>
                 </div>
                 <div class="col-sm-2">
                     <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
@@ -238,20 +238,13 @@ para poder comprar productos en la página
         <div class="collapse multi-collapse" id="stacktraceModal-overall">
             <div class="card">
                 <div class="card-header">
-                    <h4>net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException </h4>
+                    <h4>org.openqa.selenium.ElementClickInterceptedException </h4>
                 </div>
                 <div class="card-body">
                     <div>
-                        <pre>com.sofkau.tasks.BuscarProducto.performAs(BuscarProducto.java:23)<br />com.sofkau.stepdefinitions.IniciarComprarStepDefinitios.agregaElProductoAlCarritoYProcedeAComprarlo(IniciarComprarStepDefinitios.java:38)<br />io.cucumber.java.Invoker.invoke(Invoker.java:27)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:49)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:51)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:67)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:227)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:54)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
+                        <pre>com.sofkau.tasks.SeccionMercado.performAs(SeccionMercado.java:14)<br />com.sofkau.stepdefinitions.IniciarComprarStepDefinitios.agregaElProductoAlCarritoYProcedeAComprarlo(IniciarComprarStepDefinitios.java:38)<br />io.cucumber.java.Invoker.invoke(Invoker.java:27)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:49)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:51)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:67)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:227)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:54)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
                     </div>
 
-                    <h4>
-                        Caused by: org.openqa.selenium.TimeoutException
-                    </h4>
-                    <div>
-                            <pre>Expected condition failed: waiting for By.xpath: (//*[@class='bg-light-gray vtex-search-result-3-x-orderByOptionItem vtex-search-result-3-x-orderByOptionItem--selected  c-on-base f5 ml-auto db no-underline pointer tl bn pv4 ph5 w-100 right-0-ns']) to be enabled (tried for 60 second(s) with 100 milliseconds interval)</pre>
-                        <pre>com.sofkau.tasks.BuscarProducto.performAs(BuscarProducto.java :23)<br />com.sofkau.stepdefinitions.IniciarComprarStepDefinitios.agregaElProductoAlCarritoYProcedeAComprarlo(IniciarComprarStepDefinitios.java :38)<br />io.cucumber.java.Invoker.invoke(Invoker.java :27)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java :27)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java :63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java :64)<br />io.cucumber.core.runner.TestStep.run(TestStep.java :49)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java :46)<br />io.cucumber.core.runner.TestCase.run(TestCase.java :51)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java :67)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java :83)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java :24)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java :227)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java :54)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java :69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java :74)<br /></pre>
-                    </div>
                 </div>
             </div>
         </div>
@@ -259,7 +252,7 @@ para poder comprar productos en la página
 
 
                 <div class="panel-body">
-                    <a href="pagesource18140229922753947246.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                    <a href="pagesource4767174513505936485.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
                 </div>
             </div>
         <div class="slider-wrapper theme-default">
@@ -267,39 +260,45 @@ para poder comprar productos en la página
                 <img src="61866cf531c1829409ee181810543efdb6535209b0cd594f1b9aa28bc7137d46.png" title=" Given El usuario inicio sesion en pagina de exito" width="1920"/>
                 <img src="61866cf531c1829409ee181810543efdb6535209b0cd594f1b9aa28bc7137d46.png" title=" Yeison abrir pagina inicial" width="1920"/>
                 <img src="61866cf531c1829409ee181810543efdb6535209b0cd594f1b9aa28bc7137d46.png" title=" Yeison opens the Pagina inicial" width="1920"/>
-                <img src="d43baec3e5e43d084625ffea3864e69f0503979ada078cd7cea5bf41f3d2f7d1.png" title=" Yeison opens the Pagina inicial (completed)" width="1920"/>
-                <img src="9bba8d2db73dc13950aa11208fa3c642e80c6f712d176056a69f7646336bf036.png" title=" Yeison abrir pagina inicial (completed)" width="1920"/>
-                <img src="9bba8d2db73dc13950aa11208fa3c642e80c6f712d176056a69f7646336bf036.png" title=" Given El usuario inicio sesion en pagina de exito (completed)" width="1920"/>
-                <img src="9bba8d2db73dc13950aa11208fa3c642e80c6f712d176056a69f7646336bf036.png" title=" When Agrega el producto al carrito y procede a comprarlo" width="1920"/>
-                <img src="061692fb3dde6f1c5db60eeae078d21f6b3dafd1dfe8e33afbddd7f15b44ace7.png" title=" Yeison iniciar sesion" width="1920"/>
-                <img src="6bdbac64ae6594a0008ce9ccb13b929b6718a262730f02f7c01bcdae6fe01c94.png" title=" Yeison clicks on Boton para iniciar sesion" width="1920"/>
-                <img src="bd3eadf504dc4333850291233194f6f5c28360d7388cc460195f8de265ecd1a4.png" title=" Yeison clicks on Boton para iniciar sesion (completed)" width="1920"/>
-                <img src="bd3eadf504dc4333850291233194f6f5c28360d7388cc460195f8de265ecd1a4.png" title=" Yeison clicks on Boton inicar con usuario y contrasena" width="1920"/>
-                <img src="214235759f137a568290a5fddf800a7d7c8bea07101ebd61a222616068feebe0.png" title=" Yeison clicks on Boton inicar con usuario y contrasena (completed)" width="1920"/>
-                <img src="214235759f137a568290a5fddf800a7d7c8bea07101ebd61a222616068feebe0.png" title=" Yeison clicks on Campo Email" width="1920"/>
-                <img src="cfec1325d1e31dbf2f5f45fd96c0847ace036f6f5379b8cab2367907f8b95166.png" title=" Yeison clicks on Campo Email (completed)" width="1920"/>
-                <img src="cfec1325d1e31dbf2f5f45fd96c0847ace036f6f5379b8cab2367907f8b95166.png" title=" Yeison enters 'tyeisonferney@gmail.com' into Campo Email" width="1920"/>
-                <img src="158395938f7f0383906a2dc839870f593c8297b4699612a2f17bf12a2500f2b7.png" title=" Yeison enters 'tyeisonferney@gmail.com' into Campo Email (completed)" width="1920"/>
-                <img src="158395938f7f0383906a2dc839870f593c8297b4699612a2f17bf12a2500f2b7.png" title=" Yeison clicks on Campo Password" width="1920"/>
-                <img src="1ebaaaccd7e7503cfe303840d9be79ec521150e880a5209d16cd02ffe7018249.png" title=" Yeison clicks on Campo Password (completed)" width="1920"/>
-                <img src="1ebaaaccd7e7503cfe303840d9be79ec521150e880a5209d16cd02ffe7018249.png" title=" Yeison enters 'Tyeisonferney115' into Campo Password" width="1920"/>
-                <img src="65144bc02f989dbba067aa7f5bc6091cc36bb1616c7e2d644f7fe37eab302fbf.png" title=" Yeison enters 'Tyeisonferney115' into Campo Password (completed)" width="1920"/>
-                <img src="65144bc02f989dbba067aa7f5bc6091cc36bb1616c7e2d644f7fe37eab302fbf.png" title=" Yeison clicks on boton entrar" width="1920"/>
-                <img src="0325461e638f10c45b44b151c836d0c0e235e737b91f166ed16a9ee8d86c338f.png" title=" Yeison clicks on boton entrar (completed)" width="1920"/>
-                <img src="0325461e638f10c45b44b151c836d0c0e235e737b91f166ed16a9ee8d86c338f.png" title=" Yeison iniciar sesion (completed)" width="1920"/>
-                <img src="30db5d4b7fef4b42f4b8662d35bef5be9ddf8ef0d03e0344bf03caeef92ed516.png" title=" Yeison seccion mercado" width="1920"/>
-                <img src="9cc12a2d25598b5164e4fbc8889254b8996e1601edecb37c78f79b42190d1e63.png" title=" Yeison clicks on boton mercado" width="1920"/>
-                <img src="61bee656d296901b78f47e297fef760c4e91b5fdd4bb8d29e345e9e9aa654357.png" title=" Yeison clicks on boton mercado (completed)" width="1920"/>
-                <img src="61bee656d296901b78f47e297fef760c4e91b5fdd4bb8d29e345e9e9aa654357.png" title=" Yeison seccion mercado (completed)" width="1920"/>
-                <img src="61bee656d296901b78f47e297fef760c4e91b5fdd4bb8d29e345e9e9aa654357.png" title=" Yeison buscar producto" width="1920"/>
-                <img src="23879f0c6546f1c3aceeb3f535f659ecb44ba14dde25dc69c2be015b7f5cb945.png" title=" Yeison enters 'Arroz' into campo buscar producto" width="1920"/>
-                <img src="76ff40daaa63b0c933023c9cba89d68f2950b86e0710f2dff0bfcf11af2f99ea.png" title=" Yeison enters 'Arroz' into campo buscar producto (completed)" width="1920"/>
-                <img src="76ff40daaa63b0c933023c9cba89d68f2950b86e0710f2dff0bfcf11af2f99ea.png" title=" Yeison clicks on campo select prodcuto" width="1920"/>
-                <img src="e3dfe6c8941b9b872e0703bfb0d446c02b2390eac80115a27f56c742c49100d6.png" title=" Yeison clicks on campo select prodcuto (completed)" width="1920"/>
-                <img src="e3dfe6c8941b9b872e0703bfb0d446c02b2390eac80115a27f56c742c49100d6.png" title=" Yeison clicks on campo select prodcuto" width="1920"/>
-                <img src="4c12eac301303e9463bfa2a9725cfac25314d7d9e34a1eec98c873c7d7121878.png" title=" Yeison clicks on campo select prodcuto (completed)" width="1920"/>
-                <img src="4c12eac301303e9463bfa2a9725cfac25314d7d9e34a1eec98c873c7d7121878.png" title=" Yeison clicks on boton menor precio" width="1920"/>
-                <img src="8b985fd06489c43f6fc1af8a8d4f5682be733b928c0bc2d64ca1e03de4effc2c.png" title=" Yeison clicks on boton menor precio (completed): <span class='failing-color'>FAILURE</span>" width="1920"/>
+                <img src="57b8406ed19e145b4c9d5c07bb800abb991bf2b730e16eb60c21e16ca220d3c8.png" title=" Yeison opens the Pagina inicial (completed)" width="1920"/>
+                <img src="57b8406ed19e145b4c9d5c07bb800abb991bf2b730e16eb60c21e16ca220d3c8.png" title=" Yeison abrir pagina inicial (completed)" width="1920"/>
+                <img src="57b8406ed19e145b4c9d5c07bb800abb991bf2b730e16eb60c21e16ca220d3c8.png" title=" Given El usuario inicio sesion en pagina de exito (completed)" width="1920"/>
+                <img src="57b8406ed19e145b4c9d5c07bb800abb991bf2b730e16eb60c21e16ca220d3c8.png" title=" When Agrega el producto al carrito y procede a comprarlo" width="1920"/>
+                <img src="9bba8d2db73dc13950aa11208fa3c642e80c6f712d176056a69f7646336bf036.png" title=" Yeison iniciar sesion" width="1920"/>
+                <img src="cab9822b2c33c0ac341416ab52806129c1cfba03a6d2ac3379a17292831c5a9b.png" title=" Yeison clicks on Boton para iniciar sesion" width="1920"/>
+                <img src="024513469d12029dea76e3ddfdf631f53bb26eae83bf06251ebd1412b578535a.png" title=" Yeison clicks on Boton para iniciar sesion (completed)" width="1920"/>
+                <img src="024513469d12029dea76e3ddfdf631f53bb26eae83bf06251ebd1412b578535a.png" title=" Yeison clicks on Boton inicar con usuario y contrasena" width="1920"/>
+                <img src="d60fb72acc89e005441b4d4cd42ff9267b701a46ad9b3a474f56aa9efebef256.png" title=" Yeison clicks on Boton inicar con usuario y contrasena (completed)" width="1920"/>
+                <img src="d60fb72acc89e005441b4d4cd42ff9267b701a46ad9b3a474f56aa9efebef256.png" title=" Yeison clicks on Campo Email" width="1920"/>
+                <img src="59ce01a09f73118a2d1c4a4087021dd536adf2ea9a33e86c1bb7108641d3af7b.png" title=" Yeison clicks on Campo Email (completed)" width="1920"/>
+                <img src="59ce01a09f73118a2d1c4a4087021dd536adf2ea9a33e86c1bb7108641d3af7b.png" title=" Yeison enters 'tyeisonferney@gmail.com' into Campo Email" width="1920"/>
+                <img src="884286e06fe206eb85c68f6c093605dacdb14a669aa7f13b36749891e8433298.png" title=" Yeison enters 'tyeisonferney@gmail.com' into Campo Email (completed)" width="1920"/>
+                <img src="884286e06fe206eb85c68f6c093605dacdb14a669aa7f13b36749891e8433298.png" title=" Yeison clicks on Campo Password" width="1920"/>
+                <img src="ecd748235fbf2f475e7545b34fe38e619aea230709a6befcd20f3005ef6e97d4.png" title=" Yeison clicks on Campo Password (completed)" width="1920"/>
+                <img src="ecd748235fbf2f475e7545b34fe38e619aea230709a6befcd20f3005ef6e97d4.png" title=" Yeison enters 'Tyeisonferney115' into Campo Password" width="1920"/>
+                <img src="cce51939f9f778f8693b10941fe44d1bd0b9da6c918a600383e3688277965fd8.png" title=" Yeison enters 'Tyeisonferney115' into Campo Password (completed)" width="1920"/>
+                <img src="cce51939f9f778f8693b10941fe44d1bd0b9da6c918a600383e3688277965fd8.png" title=" Yeison clicks on boton entrar" width="1920"/>
+                <img src="059134dfc8a7f87fa9e183f64fc7c9414ea4bce4215556f579ff18705d4274cd.png" title=" Yeison clicks on boton entrar (completed)" width="1920"/>
+                <img src="059134dfc8a7f87fa9e183f64fc7c9414ea4bce4215556f579ff18705d4274cd.png" title=" Yeison iniciar sesion (completed)" width="1920"/>
+                <img src="8cbeced26f2a53b9cad5a7aa7913ac37636abbe32262864e1262138197fc22fd.png" title=" Yeison ubicacion envio" width="1920"/>
+                <img src="7e2db134000249b323d000f4611e0984e0273241ad473a98c094193b890c90a5.png" title=" Yeison clicks on boton DONDE ENVIAR" width="1920"/>
+                <img src="8b9324936733c4eaf482380bae0ac1ea40350a2a4b7005e3b3a6cdb18d499c74.png" title=" Yeison clicks on boton DONDE ENVIAR (completed)" width="1920"/>
+                <img src="8b9324936733c4eaf482380bae0ac1ea40350a2a4b7005e3b3a6cdb18d499c74.png" title=" Yeison clicks on Boton  ciudad" width="1920"/>
+                <img src="2960c3252c2d04e8e72a2ee797335cdffce5dfd61cefbedb8bf373d7f60ceca8.png" title=" Yeison clicks on Boton  ciudad (completed)" width="1920"/>
+                <img src="2960c3252c2d04e8e72a2ee797335cdffce5dfd61cefbedb8bf373d7f60ceca8.png" title=" Yeison types 'ENTER' in Boton  ciudad" width="1920"/>
+                <img src="b13b88128e33c5479e0641f40ae88c73873fdd734038a22536cce72be4bb74bd.png" title=" Yeison types 'ENTER' in Boton  ciudad (completed)" width="1920"/>
+                <img src="ff217381920db44b57d927703bd8448c396cdbcffe62c78ae7fae620ab79eeeb.png" title=" Yeison clicks on Boton  tienda" width="1920"/>
+                <img src="73f91e376ce5b9bf24ce4b3e5f7f0ded472247b0ed2a61ef960a9b161af7a828.png" title=" Yeison clicks on Boton  tienda (completed)" width="1920"/>
+                <img src="73f91e376ce5b9bf24ce4b3e5f7f0ded472247b0ed2a61ef960a9b161af7a828.png" title=" Yeison types 'ENTER' in Boton  tienda" width="1920"/>
+                <img src="6327ecbbd8508d13855e5669d8956d5922c9d7689ea5fe622be5c2e3ec85733d.png" title=" Yeison types 'ENTER' in Boton  tienda (completed)" width="1920"/>
+                <img src="6327ecbbd8508d13855e5669d8956d5922c9d7689ea5fe622be5c2e3ec85733d.png" title=" Yeison clicks on Boton  confirmar" width="1920"/>
+                <img src="b3b0aaec78c4566cc2fafdf974e43372ddba132c8b9cfa65d3ec713d30008bbd.png" title=" Yeison clicks on Boton  confirmar (completed)" width="1920"/>
+                <img src="b3b0aaec78c4566cc2fafdf974e43372ddba132c8b9cfa65d3ec713d30008bbd.png" title=" Yeison clicks on Boton cerrar" width="1920"/>
+                <img src="7cce32d7cb7c6c9d7e47847a40e7223953c781212f266cad642d3ef3fb45712a.png" title=" Yeison clicks on Boton cerrar (completed)" width="1920"/>
+                <img src="7cce32d7cb7c6c9d7e47847a40e7223953c781212f266cad642d3ef3fb45712a.png" title=" Yeison ubicacion envio (completed)" width="1920"/>
+                <img src="f708976f127e1352731c4424d1a73677108119ca459d61e7a1561d6fd2a3db07.png" title=" Yeison seccion mercado" width="1920"/>
+                <img src="f708976f127e1352731c4424d1a73677108119ca459d61e7a1561d6fd2a3db07.png" title=" Yeison clicks on boton mercado" width="1920"/>
+                <img src="f708976f127e1352731c4424d1a73677108119ca459d61e7a1561d6fd2a3db07.png" title=" Yeison clicks on boton mercado (completed): <span class='error-color'>ERROR</span>" width="1920"/>
             </div>
         </div>
 

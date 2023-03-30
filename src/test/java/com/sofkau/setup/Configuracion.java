@@ -7,6 +7,7 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.thucydides.core.annotations.Managed;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -60,6 +61,11 @@ public class Configuracion {
     public static void waitExplicit() {
         WebDriverWait wait = new WebDriverWait(getDriver(), DIEZ_SEGUNDOS);
         wait.until(ExpectedConditions.alertIsPresent());
+    }
+
+    public static void waitExplicit(WebElement elemento) {
+        WebDriverWait wait = new WebDriverWait(getDriver(), DIEZ_SEGUNDOS);
+        wait.until(ExpectedConditions.elementToBeClickable(elemento));
     }
 
 
