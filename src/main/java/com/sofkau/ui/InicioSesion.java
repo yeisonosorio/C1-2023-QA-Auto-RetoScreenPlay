@@ -22,8 +22,13 @@ public class InicioSesion extends PageObject {
             .located(By.xpath("//span[contains(text(), 'Entrar')]"));
 
 
-    public static final Target BOTON_MENOR_PRECIO= Target.the("boton menor precio")
-            .located(By.xpath("(//*[@class='bg-light-gray vtex-search-result-3-x-orderByOptionItem vtex-search-result-3-x-orderByOptionItem--selected  c-on-base f5 ml-auto db no-underline pointer tl bn pv4 ph5 w-100 right-0-ns'])"));
+    public static final Target BOTON_CERRAR_MODAL= Target.the("boton entrar")
+            .located(By.xpath("(//button[@class='vtex-store-drawer-0-x-closeIconButton pa4 pointer bg-transparent transparent bn pointer'])[1]"));
+
+
+
+
+    //
 
 
 }
