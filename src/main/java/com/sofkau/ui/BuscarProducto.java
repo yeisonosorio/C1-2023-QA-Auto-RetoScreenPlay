@@ -20,20 +20,12 @@ public class BuscarProducto extends PageObject {
             .located(By.xpath("//button[normalize-space()='Menor precio primero']"));
 
 
-    public static final Target ORDENER_EN_LISTA = Target.the("Ordenar lista")
-            .located(By.id("Grupo_15152"));
-
-
-    public static final Target AUMENTAR_PRODUCTO= Target.the("aumentar producto")
-            .located(By.xpath("//*[@class='shelf-exito-vtex-components-buy-button-manager-more]"));
-
-
     public static final Target BOTON__BAJAR_ARROZ= Target.the("aumentar producto")
-            .located(By.xpath("//*[@id=\"gallery-layout-container\"]/div[1]/section/a/article/div[3]/div[1]/div/img"));
+            .located(By.xpath("(//*[@class='vtex-product-summary-2-x-imageNormal vtex-product-summary-2-x-image'])[1]"));
 
 
     public static final Target BOTON_ARROZ_BLANCO= Target.the("boton arroz")
-            .located(By.xpath("//a[contains(text(), 'arroz blanco')]"));
+            .located(By.xpath("(//a[contains(text(), 'arroz blanco')])[1]"));
 
 
 

@@ -2,12 +2,9 @@ package com.sofkau.tasks;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.actions.Clear;
-import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 
 import static com.sofkau.ui.DatosComprador.*;
-import static com.sofkau.ui.FinalizarCompra.*;
 
 
 public class DatosComprador implements Task {
@@ -45,7 +42,14 @@ public class DatosComprador implements Task {
                 Enter.theValue(apellido).into(CAMPO_APELLIDO),
                 Enter.theValue(documento).into(CAMPO_DOCUMENTO),
                 Enter.theValue(celular).into(CAMPO_CELULAR)
+
         );
+
+        if (nombre.isEmpty() || apellido.isEmpty()) {
+            Enter.theValue(nombre).into(CAMPO_NOMBRE);
+            Enter.theValue(apellido).into(CAMPO_APELLIDO);
+        }
+
     }
 
     public static DatosComprador datosComprador() {

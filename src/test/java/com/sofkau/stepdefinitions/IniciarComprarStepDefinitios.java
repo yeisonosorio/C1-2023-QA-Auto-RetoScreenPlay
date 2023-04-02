@@ -11,9 +11,9 @@ import static com.sofkau.questions.DetalleFactura.detalleFactura;
 import static com.sofkau.tasks.AgregarCarrito.agregarCarrito;
 import static com.sofkau.tasks.BuscarProducto.buscarProducto;
 import static com.sofkau.tasks.DatosComprador.datosComprador;
-import static com.sofkau.tasks.FinalizarCompra.finalizarCompra;
 import static com.sofkau.tasks.IniciarSesion.iniciarSesion;
 import static com.sofkau.tasks.IrComprar.irComprar;
+import static com.sofkau.tasks.PagoFinal.pagoFinal;
 import static com.sofkau.tasks.RefresPag.refresPag;
 import static com.sofkau.tasks.SeccionMercado.seccionMercado;
 import static com.sofkau.tasks.TerminosContinuar.terminosContinuar;
@@ -36,7 +36,8 @@ public class IniciarComprarStepDefinitios extends Configuracion {
         try {
             configurarNavegador();
             theActorInTheSpotlight().wasAbleTo(
-                    new AbrirPaginaInicial()
+                    new AbrirPaginaInicial(),
+                    iniciarSesion()
             );
         } catch (Exception e) {
             LOGGER.info("fallo la configuracion");
@@ -50,7 +51,6 @@ public class IniciarComprarStepDefinitios extends Configuracion {
     public void agregaElProductoAlCarritoYProcedeAComprarlo() {
         try {
             theActorInTheSpotlight().attemptsTo(
-                    iniciarSesion(),
                     ubicacionEnvio(),
                     seccionMercado(),
                     buscarProducto()
@@ -59,15 +59,15 @@ public class IniciarComprarStepDefinitios extends Configuracion {
                     irComprar(),
                     refresPag(),
                     datosComprador()
-                            .conElNombre("yeison f")
-                            .yElApellido("ferney f")
+                            .conElNombre("leonardo leones")
+                            .yElApellido("jaramillo perez")
                             .conElCelular("3124321312")
                             .yElDocumento("109872354"),
-                    finalizarCompra(),
-                    terminosContinuar()
+                    terminosContinuar(),
+                    pagoFinal()
             );
         } catch (Exception e) {
-            LOGGER.info("fallo la configuracion aqui");
+            LOGGER.info("fallo el proceso de compra de producto");
             LOGGER.warn(e.getMessage());
             quitarDriver();
         }
