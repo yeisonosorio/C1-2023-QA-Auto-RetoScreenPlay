@@ -8,7 +8,7 @@ public class DetallesFactura  extends PageObject {
 
 
     public static final Target MENSAJE_FACTURA = Target.the("nombre cliente")
-            .located(By.xpath("//*[strong='Detalles de tu compra']"));
+            .located(By.cssSelector("body div div div div div h3 strong"));
 
 
 

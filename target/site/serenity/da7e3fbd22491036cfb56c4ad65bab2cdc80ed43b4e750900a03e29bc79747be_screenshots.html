@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="4ab7dd9f6709d395bc676451b556dd4b0f7622b8904d8e5d44d8dd0d12b4ef0c.html">Iniciar Sesion En La Pagina Del Exito Y Agregar Productos Al Carrito</a></span>
+                > <span class="truncate-60"><a
+                    href="da7e3fbd22491036cfb56c4ad65bab2cdc80ed43b4e750900a03e29bc79747be.html">seleccionar un producto </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 01-04-2023 22:05</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Iniciar Sesion En La Pagina Del Exito Y Agregar Productos Al Carrito </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                yo como usuario de la pagina exito.com<br />
+quiero iniciar sesion para poder usar la pagina<br />
+para poder comprar productos en la página
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="4b135943d06dd6b4a65a8343d236a6e53a8c8509cfbb55ebb8f61a9ad053ed98.html">Compra Producto
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">seleccionar un producto
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="61866cf531c1829409ee181810543efdb6535209b0cd594f1b9aa28bc7137d46.png" title=" Given El usuario inicio sesion en pagina de exito" width="1920"/>
+                <img src="61866cf531c1829409ee181810543efdb6535209b0cd594f1b9aa28bc7137d46.png" title=" Yeison abrir pagina inicial" width="1920"/>
+                <img src="61866cf531c1829409ee181810543efdb6535209b0cd594f1b9aa28bc7137d46.png" title=" Yeison opens the Pagina inicial" width="1920"/>
+                <img src="0a257b11e4a817f085fcd07e7f5415a9c3513447f1a247286b22754afe40ad45.png" title=" Yeison opens the Pagina inicial (completed)" width="1920"/>
+                <img src="0a257b11e4a817f085fcd07e7f5415a9c3513447f1a247286b22754afe40ad45.png" title=" Yeison abrir pagina inicial (completed)" width="1920"/>
+                <img src="0a257b11e4a817f085fcd07e7f5415a9c3513447f1a247286b22754afe40ad45.png" title=" Yeison iniciar sesion" width="1920"/>
+                <img src="fe0d16cd82ef7113771620a8c9f2ef1687de80ad4aa57002944adbb92fc2a701.png" title=" Yeison clicks on Boton para iniciar sesion" width="1920"/>
+                <img src="442e279d85e879da1e4bea9c272bc24c77cbf171ed4880a221b83be79fa3e9d9.png" title=" Yeison clicks on Boton para iniciar sesion (completed)" width="1920"/>
+                <img src="442e279d85e879da1e4bea9c272bc24c77cbf171ed4880a221b83be79fa3e9d9.png" title=" Yeison clicks on Boton inicar con usuario y contrasena" width="1920"/>
+                <img src="c7481cc8b94e5c3059b09075d237f766a166811e768871d8ea5edf67883ec213.png" title=" Yeison clicks on Boton inicar con usuario y contrasena (completed)" width="1920"/>
+                <img src="c7481cc8b94e5c3059b09075d237f766a166811e768871d8ea5edf67883ec213.png" title=" Yeison enters 'tyeisonferney@gmail.com' into Campo Email" width="1920"/>
+                <img src="5f5dbc0b83aa3d576cf91b0d4375718c586ef220be74e965b348e7f2999da56b.png" title=" Yeison enters 'tyeisonferney@gmail.com' into Campo Email (completed)" width="1920"/>
+                <img src="5f5dbc0b83aa3d576cf91b0d4375718c586ef220be74e965b348e7f2999da56b.png" title=" Yeison enters 'Tyeisonferney115' into Campo Password" width="1920"/>
+                <img src="a9bb284a230c0c16d6a6c98126f04983926f2dbfeda4619484705fc825c84085.png" title=" Yeison enters 'Tyeisonferney115' into Campo Password (completed)" width="1920"/>
+                <img src="a9bb284a230c0c16d6a6c98126f04983926f2dbfeda4619484705fc825c84085.png" title=" Yeison clicks on boton entrar" width="1920"/>
+                <img src="a64d9f7b7c67ba9de419b4185908b591eb739f79fe4c4ca3e06f5febac096b4d.png" title=" Yeison clicks on boton entrar (completed)" width="1920"/>
+                <img src="a64d9f7b7c67ba9de419b4185908b591eb739f79fe4c4ca3e06f5febac096b4d.png" title=" Yeison clicks on boton entrar" width="1920"/>
+                <img src="ec9fa20748d72ce73066af0827d0c796f5ff221c5938070edc90f7569eb853dd.png" title=" Yeison clicks on boton entrar (completed)" width="1920"/>
+                <img src="ec9fa20748d72ce73066af0827d0c796f5ff221c5938070edc90f7569eb853dd.png" title=" Yeison iniciar sesion (completed)" width="1920"/>
+                <img src="ec9fa20748d72ce73066af0827d0c796f5ff221c5938070edc90f7569eb853dd.png" title=" Given El usuario inicio sesion en pagina de exito (completed)" width="1920"/>
+                <img src="9cc06be3ff81de3ddc5a3d17575780cf7c4601db6c8568bb2201545f20928a87.png" title=" When Agrega el producto al carrito y procede a comprarlo" width="1920"/>
+                <img src="9cc06be3ff81de3ddc5a3d17575780cf7c4601db6c8568bb2201545f20928a87.png" title=" Yeison ubicacion envio" width="1920"/>
+                <img src="9cc06be3ff81de3ddc5a3d17575780cf7c4601db6c8568bb2201545f20928a87.png" title=" Yeison clicks on boton DONDE ENVIAR" width="1920"/>
+                <img src="8bb9e92e7d7d618e97c7f471863465711862f87597ddbf8de103f7d78e266ddc.png" title=" Yeison clicks on boton DONDE ENVIAR (completed)" width="1920"/>
+                <img src="8bb9e92e7d7d618e97c7f471863465711862f87597ddbf8de103f7d78e266ddc.png" title=" Yeison clicks on Boton  ciudad" width="1920"/>
+                <img src="2c5d25eb216859aad08ce81f03e8ee23c460f5db828f608e3cc98c98c546c6db.png" title=" Yeison clicks on Boton  ciudad (completed)" width="1920"/>
+                <img src="2c5d25eb216859aad08ce81f03e8ee23c460f5db828f608e3cc98c98c546c6db.png" title=" Yeison types 'ENTER' in Boton  ciudad" width="1920"/>
+                <img src="663f071206a74f7be45d7f0b6c7633443a3f429ec550797ca4206e486b0fab48.png" title=" Yeison types 'ENTER' in Boton  ciudad (completed)" width="1920"/>
+                <img src="663f071206a74f7be45d7f0b6c7633443a3f429ec550797ca4206e486b0fab48.png" title=" Yeison clicks on Boton  almacen" width="1920"/>
+                <img src="443cd68b775d8263a3feb0703b4414b3780b970b9108a625b5cfabcfe354f6e0.png" title=" Yeison clicks on Boton  almacen (completed)" width="1920"/>
+                <img src="443cd68b775d8263a3feb0703b4414b3780b970b9108a625b5cfabcfe354f6e0.png" title=" Yeison types 'ENTER' in Boton  almacen" width="1920"/>
+                <img src="9a39580afccfd45f61c52ea324a880d3cabdd06247136792c8bba94744ebb6e5.png" title=" Yeison types 'ENTER' in Boton  almacen (completed)" width="1920"/>
+                <img src="9a39580afccfd45f61c52ea324a880d3cabdd06247136792c8bba94744ebb6e5.png" title=" Yeison clicks on Boton  confirmar" width="1920"/>
+                <img src="7998a5b0b8e01973d76bb42b9748a8debcb7e1da12f07d88300fb07a5b152220.png" title=" Yeison clicks on Boton  confirmar (completed)" width="1920"/>
+                <img src="7998a5b0b8e01973d76bb42b9748a8debcb7e1da12f07d88300fb07a5b152220.png" title=" Yeison clicks on Boton cerrar" width="1920"/>
+                <img src="519e36b00675b8cbc2100381410a142adb838a04cd57b44aee68641437687357.png" title=" Yeison clicks on Boton cerrar (completed)" width="1920"/>
+                <img src="519e36b00675b8cbc2100381410a142adb838a04cd57b44aee68641437687357.png" title=" Yeison ubicacion envio (completed)" width="1920"/>
+                <img src="519e36b00675b8cbc2100381410a142adb838a04cd57b44aee68641437687357.png" title=" Yeison seccion mercado" width="1920"/>
+                <img src="00b0f01d2bb65856b801a156ca82f3d3ba1d0cfecff91fc9857e052de120ff68.png" title=" Yeison clicks on boton mercado" width="1920"/>
+                <img src="54fd5ce7b31cdd145b2ca933db27a8929a0b44cc80063d6322003896fa45c73a.png" title=" Yeison clicks on boton mercado (completed)" width="1920"/>
+                <img src="54fd5ce7b31cdd145b2ca933db27a8929a0b44cc80063d6322003896fa45c73a.png" title=" Yeison seccion mercado (completed)" width="1920"/>
+                <img src="4540ff40a95f46fe309a88b4ba80a070baa068f21307b98d5c61eaca167f1848.png" title=" Yeison buscar producto" width="1920"/>
+                <img src="4caed417b6c58e66411d9a102741e3b8b6e709dc47f89d91a7e869723634bd76.png" title=" Yeison enters 'Arroz' into campo buscar producto" width="1920"/>
+                <img src="979a63a645380ec684b638c4b21fbd81f6c999e7d6b0250122f3ef6738974fc5.png" title=" Yeison enters 'Arroz' into campo buscar producto (completed)" width="1920"/>
+                <img src="979a63a645380ec684b638c4b21fbd81f6c999e7d6b0250122f3ef6738974fc5.png" title=" Yeison clicks on campo select prodcuto" width="1920"/>
+                <img src="e617d61ffef09caa9be6efab92d6383530ead6b45c6a154b6ecfb5a9ecaeec60.png" title=" Yeison clicks on campo select prodcuto (completed)" width="1920"/>
+                <img src="e617d61ffef09caa9be6efab92d6383530ead6b45c6a154b6ecfb5a9ecaeec60.png" title=" Yeison clicks on boton arroz" width="1920"/>
+                <img src="bbda64a538a6a4dda709916ad73c74a14e5ae65151815fb92236db19aa2a5d75.png" title=" Yeison clicks on boton arroz (completed)" width="1920"/>
+                <img src="6603e4341cbd1532901fba9b469ee36edb93dd16279840c80bd805ab0028657e.png" title=" Yeison clicks on campo select prodcuto" width="1920"/>
+                <img src="8b27c2a27c4c72d5304657a6cface690b947bfb56403369090085dd379e6a5de.png" title=" Yeison clicks on campo select prodcuto (completed)" width="1920"/>
+                <img src="2e57353ad71f567d195dfd4e92f53f6499849376fcf356237c94b95f3d507291.png" title=" Yeison clicks on Ordenar Precio" width="1920"/>
+                <img src="70000a77530ed2c0c68f37e41a379aa5b607d2fa0198a61689f7028d19d69cf7.png" title=" Yeison clicks on Ordenar Precio (completed)" width="1920"/>
+                <img src="ba3cd7db0e26bcc24498741cf656cb7bec5c65989effa1daa302f46b29f5e019.png" title=" Yeison clicks on aumentar producto" width="1920"/>
+                <img src="3ea2e2a31db4628dbebce5e647dd80c4c61fb569a6b35e8bf74453eab038e7bc.png" title=" Yeison clicks on aumentar producto (completed)" width="1920"/>
+                <img src="3ea2e2a31db4628dbebce5e647dd80c4c61fb569a6b35e8bf74453eab038e7bc.png" title=" Yeison buscar producto (completed)" width="1920"/>
+                <img src="3ea2e2a31db4628dbebce5e647dd80c4c61fb569a6b35e8bf74453eab038e7bc.png" title=" Yeison agregar carrito" width="1920"/>
+                <img src="6561f97210efb0ac51b520288a28a6a3d410c8fcc4f61497a8ac87fc76be8c65.png" title=" Yeison clicks on agregar al carrito" width="1920"/>
+                <img src="0fb25b95c0306a5574b6cd024af30a645be3d73c7332f5652313e0b80ac49795.png" title=" Yeison clicks on agregar al carrito (completed)" width="1920"/>
+                <img src="6a04ac3401a367ec72e0013af9e456aa460f821a917eeb2fbba25350506fde35.png" title=" Yeison clicks on seleccion carrito" width="1920"/>
+                <img src="f272239960a5d2507c5189132d94ac5e290b850210300112259950c6bf4ffe97.png" title=" Yeison clicks on seleccion carrito (completed)" width="1920"/>
+                <img src="f272239960a5d2507c5189132d94ac5e290b850210300112259950c6bf4ffe97.png" title=" Yeison agregar carrito (completed)" width="1920"/>
+                <img src="f272239960a5d2507c5189132d94ac5e290b850210300112259950c6bf4ffe97.png" title=" Yeison ir comprar" width="1920"/>
+                <img src="f272239960a5d2507c5189132d94ac5e290b850210300112259950c6bf4ffe97.png" title=" Yeison clicks on Campo ir a pagar" width="1920"/>
+                <img src="d97dc8a8165800b0f2cd04f2e812896e2dd772f5c7835a04c63db127a25e8744.png" title=" Yeison clicks on Campo ir a pagar (completed)" width="1920"/>
+                <img src="d97dc8a8165800b0f2cd04f2e812896e2dd772f5c7835a04c63db127a25e8744.png" title=" Yeison ir comprar (completed)" width="1920"/>
+                <img src="d97dc8a8165800b0f2cd04f2e812896e2dd772f5c7835a04c63db127a25e8744.png" title=" Yeison refreshes the browser" width="1920"/>
+                <img src="0f8644f22cf0229ec6a111274f360dd274059ade71611383725a9f1eab0d4e33.png" title=" Yeison refreshes the browser (completed)" width="1920"/>
+                <img src="0f8644f22cf0229ec6a111274f360dd274059ade71611383725a9f1eab0d4e33.png" title=" Yeison datos comprador" width="1920"/>
+                <img src="d9d36991812a54b842809a062883c97b7638bf40694e1a1049673507b7ad047f.png" title=" Yeison enters 'leonardo leones' into nombre cliente" width="1920"/>
+                <img src="ea7af20ae2b3ef844311fe47e8f896cb5e442005faa3f757254fb72d5d7388c6.png" title=" Yeison enters 'leonardo leones' into nombre cliente (completed)" width="1920"/>
+                <img src="9acbb8bb392b56c42ed77f6ea05dcafb92f6bfd0d0399fa6580b6fe4caf9211a.png" title=" Yeison enters 'jaramillo perez' into apeliido cliente" width="1920"/>
+                <img src="32ee9d7a777eb695c75b9020ec8375dab7b52f083c8c59f459316b1d434796a9.png" title=" Yeison enters 'jaramillo perez' into apeliido cliente (completed)" width="1920"/>
+                <img src="32ee9d7a777eb695c75b9020ec8375dab7b52f083c8c59f459316b1d434796a9.png" title=" Yeison enters '109872354' into documento" width="1920"/>
+                <img src="28922f628e4f6adf25f9130f30dfc042d9827e5e1a076a460f56a1476e67b531.png" title=" Yeison enters '109872354' into documento (completed)" width="1920"/>
+                <img src="28922f628e4f6adf25f9130f30dfc042d9827e5e1a076a460f56a1476e67b531.png" title=" Yeison enters '3124321312' into celular cliente" width="1920"/>
+                <img src="55de45ad4c058d88f8ef54930144a228ec30cb916bfc16d44fe1ba3de2838061.png" title=" Yeison enters '3124321312' into celular cliente (completed)" width="1920"/>
+                <img src="55de45ad4c058d88f8ef54930144a228ec30cb916bfc16d44fe1ba3de2838061.png" title=" Yeison enters 'leonardo leones' into nombre cliente" width="1920"/>
+                <img src="4a9d861279787a4898570b22e284e8cc0f31df382c06aedd69849faa7fd87f1f.png" title=" Yeison enters 'leonardo leones' into nombre cliente (completed)" width="1920"/>
+                <img src="4a9d861279787a4898570b22e284e8cc0f31df382c06aedd69849faa7fd87f1f.png" title=" Yeison enters 'jaramillo perez' into apeliido cliente" width="1920"/>
+                <img src="39d3b85b7fd26d1e06faa927b022a7fd30ed3acfb49dd0d2d45caeeb1c2076a4.png" title=" Yeison enters 'jaramillo perez' into apeliido cliente (completed)" width="1920"/>
+                <img src="39d3b85b7fd26d1e06faa927b022a7fd30ed3acfb49dd0d2d45caeeb1c2076a4.png" title=" Yeison datos comprador (completed)" width="1920"/>
+                <img src="39d3b85b7fd26d1e06faa927b022a7fd30ed3acfb49dd0d2d45caeeb1c2076a4.png" title=" Yeison terminos continuar" width="1920"/>
+                <img src="39d3b85b7fd26d1e06faa927b022a7fd30ed3acfb49dd0d2d45caeeb1c2076a4.png" title=" Yeison clicks on boton continuar" width="1920"/>
+                <img src="c7f1f61a6ffa963e225e43078d4a742f56b991b713bec8823ad11ddefdcc4f9b.png" title=" Yeison clicks on boton continuar (completed)" width="1920"/>
+                <img src="068a1613e5d5ffbbb800485b9dc36f245527c73cf350f85784316fb9a8d29154.png" title=" Yeison clicks on boton continuar con la compra" width="1920"/>
+                <img src="ec805486ce916f206f78ed031e250580591269d9b78c7a7e1bf239c0a3dd07ce.png" title=" Yeison clicks on boton continuar con la compra (completed)" width="1920"/>
+                <img src="ec805486ce916f206f78ed031e250580591269d9b78c7a7e1bf239c0a3dd07ce.png" title=" Yeison clicks on boton select fecha" width="1920"/>
+                <img src="19109f820a8b4bb115086bf6d3338a390ddf7442a096ad050390d53599b6328c.png" title=" Yeison clicks on boton select fecha (completed)" width="1920"/>
+                <img src="19109f820a8b4bb115086bf6d3338a390ddf7442a096ad050390d53599b6328c.png" title=" Yeison clicks on boton pago final" width="1920"/>
+                <img src="811d49cabf1b8fa349506c15656bc14bf08301dd07f3b22b5b6593d44d8b6cec.png" title=" Yeison clicks on boton pago final (completed)" width="1920"/>
+                <img src="aa88c9c0daf8b40552523b083ba140af2d7e4529250ce5118ce1ae85e7f60af3.png" title=" Yeison terminos continuar (completed)" width="1920"/>
+                <img src="aa88c9c0daf8b40552523b083ba140af2d7e4529250ce5118ce1ae85e7f60af3.png" title=" Yeison pago final" width="1920"/>
+                <img src="aa88c9c0daf8b40552523b083ba140af2d7e4529250ce5118ce1ae85e7f60af3.png" title=" Yeison clicks on boton pse" width="1920"/>
+                <img src="3010bed57e3d20a4a736339d0f01982c1d8cb3e5abea29c158362204bd942fed.png" title=" Yeison clicks on boton pse (completed)" width="1920"/>
+                <img src="3010bed57e3d20a4a736339d0f01982c1d8cb3e5abea29c158362204bd942fed.png" title=" Yeison clicks on boton pagar finalo" width="1920"/>
+                <img src="cc47a3d49a498df12c9f893fade08ca041be3a32b3a471c17a8455fed6486072.png" title=" Yeison clicks on boton pagar finalo (completed)" width="1920"/>
+                <img src="cc47a3d49a498df12c9f893fade08ca041be3a32b3a471c17a8455fed6486072.png" title=" Yeison pago final (completed)" width="1920"/>
+                <img src="cc47a3d49a498df12c9f893fade08ca041be3a32b3a471c17a8455fed6486072.png" title=" When Agrega el producto al carrito y procede a comprarlo (completed)" width="1920"/>
+                <img src="6e9027fb104c82929f82e7f5f73690de14df5cf907151b8990b051858388668d.png" title=" Then Valida que el producto se haya agregado exitosamente" width="1920"/>
+                <img src="6e9027fb104c82929f82e7f5f73690de14df5cf907151b8990b051858388668d.png" title=" Then detalle factura should be 'Detalles de tu compra'" width="1920"/>
+                <img src="9533dc5547d19797d3f14675b264dbdf81f49206d50f8b5a1a3abb6af7d796dc.png" title=" Then detalle factura should be 'Detalles de tu compra' (completed)" width="1920"/>
+                <img src="4d2436d35db837baeaeafbe370360fb2c304ddf80d1b05fcd9b44bcff2d807b4.png" title=" Then Valida que el producto se haya agregado exitosamente (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.2.9</span>
+</div>
+</body>
+</html>

@@ -32,7 +32,7 @@ public class TerminosCondiciones extends PageObject {
 
 
     public static final Target BOTON_PAGAR_FINAL = Target.the("boton pagar finalo")
-            .located(By.xpath("//*[@id='payment-data-submit']"));
+            .located(By.xpath("(//button[@id='payment-data-submit'])[2]"));
 
 
 

@@ -7,6 +7,7 @@ import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.Scroll;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
+import static com.sofkau.ui.AgregarCarrito.AGREGAR_CARRITO;
 import static com.sofkau.ui.BuscarProducto.*;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.*;
 
@@ -26,11 +27,9 @@ public class BuscarProducto implements Task {
                 Enter.theValue(producto).into(CAMPO_BUSCAR_PRODUCTO),
                 Click.on(SELECT_PRODUCTO_SUGERIDO),
                 Click.on(BOTON_ARROZ_BLANCO),
+                WaitUntil.the(BOTON_ORDENAR_POR, isClickable()).forNoMoreThan(10).seconds(),
                 Click.on(BOTON_ORDENAR_POR),
-                WaitUntil.the(BOTON_MENOR_PRECIO, isPresent()),
-                WaitUntil.the(BOTON_MENOR_PRECIO, isCurrentlyVisible()),
-                WaitUntil.the(BOTON_MENOR_PRECIO, isCurrentlyEnabled()),
-                WaitUntil.the(BOTON_MENOR_PRECIO, isClickable()),
+                WaitUntil.the(BOTON_MENOR_PRECIO, isClickable()).forNoMoreThan(10).seconds(),
                 Click.on(BOTON_MENOR_PRECIO),
                 Scroll.to(BOTON__BAJAR_ARROZ),
                 Click.on(BOTON__BAJAR_ARROZ)
